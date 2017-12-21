@@ -7,9 +7,8 @@ if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
 
 $start_from = ($page-1) * $num_rec_per_page;
 
-$sqltotal = "SELECT * FROM items";
-$sql = "SELECT * FROM items Order By id desc LIMIT $start_from, $num_rec_per_page";
-
+$sqltotal = "SELECT * FROM orderform";
+$sql = "SELECT * FROM orderform Order By orderid desc LIMIT $start_from, $num_rec_per_page";
 
   $result = $mysqli->query($sql);
 
