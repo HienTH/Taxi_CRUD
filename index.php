@@ -122,7 +122,7 @@
 						</select>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" style="text-align: right;">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
 							<button type="submit" class="btn crud-submit btn-success">OK</button>
 						</div>
@@ -199,7 +199,7 @@
 						</select>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" style="text-align: right;">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
 							<button type="submit" class="btn btn-success crud-submit-edit">OK</button>
 						</div>
