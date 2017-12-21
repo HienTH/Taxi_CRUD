@@ -178,10 +178,10 @@
 						<label for="pnr">Mã chuyến bay</label>
 						<input type="text" id="pnr" name="pnr" placeholder="Nhập mã chuyến bay" class="form-control" />
 						</div>
-						
+
 						<div class="form-group">
 						<label for="orderfrom">Địa điểm, giờ đi</label>
-						<input type="text" id="orderfrom" name="orderfrom" placeholder="Nhập địa điểm, giờ đi" class=form-control" />
+						<input type="text" id="orderfrom" name="orderfrom" placeholder="Nhập địa điểm, giờ đi" class=form-control" style="width: 100%"/>
 						</div>
 						
 						<div class="form-group">
