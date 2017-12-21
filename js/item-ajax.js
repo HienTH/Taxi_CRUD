@@ -165,7 +165,7 @@ $("body").on("click",".edit-item",function(){
     if (status=="Yêu cầu gọi lại"){
             status=4;
         }
-        
+
     $("#edit-item").find("input[name='orderid']").val(orderid);
     $("#edit-item").find("input[name='name']").val(name);
     $("#edit-item").find("input[name='mobile']").val(mobile);
@@ -203,7 +203,7 @@ $(".crud-submit-edit").click(function(e){
         }).done(function(data){
             getPageData();
             $(".modal").modal('hide');
-            toastr.success('Thêm đơn hàng thành công !!!.', 'Thông báo', {timeOut: 5000});
+            toastr.success('Sửa đơn hàng thành công !!!.', 'Thông báo', {timeOut: 5000});
         });
     }else{
         alert('Bạn nhập thiếu trường !!!.')
