@@ -9,9 +9,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+	    <link rel="shortcut icon" type="image/x-icon" href="/crud/favicon.ico">
 
 	<script type="text/javascript">
-    	var url = "http://127.0.0.1:80/";
+    	var url = "http://45.119.83.5/crud/";
     </script>
     <style type="text/css">
     	.modal-dialog, .modal-content{
@@ -19,7 +20,7 @@
 		}
     </style>
 
-    <script src="/js/item-ajax.js"></script>
+    <script src= "/crud/js/item-ajax.js"></script>
 </head>
 <body>
 
@@ -30,8 +31,8 @@
 		            <h2>ĐÔNG DƯƠNG DC</h2>
 		        </div>
 		        <div class="pull-right">
-				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#create-item">
-					  Thêm
+				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#create-item" style="margin-top:15px;">
+					  Thêm đơn hàng
 				</button>
 		        </div>
 		    </div>
@@ -104,7 +105,7 @@
 						</div>
 						<div class="form-group">
 						<label for="orderfrom">Địa điểm, giờ đi</label>
-						<input type="text" id="orderfrom" name="orderfrom" placeholder="Nhập địa điểm, giờ đi" class=form-control" />
+						<input type="text" id="orderfrom" name="orderfrom" placeholder="Nhập địa điểm, giờ đi" class=form-control" style="width: 100%"/>
 						</div>
 						
 						<div class="form-group">
@@ -122,7 +123,7 @@
 						</select>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" style="text-align: right;">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
 							<button type="submit" class="btn crud-submit btn-success">OK</button>
 						</div>
@@ -199,7 +200,7 @@
 						</select>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" style="text-align: right;">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
 							<button type="submit" class="btn btn-success crud-submit-edit">OK</button>
 						</div>

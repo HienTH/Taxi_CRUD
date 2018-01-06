@@ -14,7 +14,7 @@ function manageData() {
         url: url+'api/getData.php',
         data: {page:page}
     }).done(function(data){
-    	total_page = Math.ceil(data.total/10);
+    	total_page = Math.ceil(data.total/10) + 1;
     	current_page = page;
 
     	$('#pagination').twbsPagination({
@@ -50,7 +50,19 @@ function getPageData() {
 function manageRow(data) {
 	var	rows = '';
 	$.each( data, function( key, value ) {
-	  	rows = rows + '<tr>';
+//	  	rows = rows + '<tr>';
+ 	if (value.status=="1"){
+            rows = rows + '<tr style="background-color:#d5ecab;">';
+        }
+        if (value.status=="2"){
+            rows = rows + '<tr style="background-color:#f1f8ff;">';
+        }
+        if (value.status=="3"){
+            rows = rows + '<tr style="background-color:#c8e1ff;">';
+        }
+        if (value.status=="4"){
+            rows = rows + '<tr>';
+        }
         rows = rows + '<td>'+value.orderid+'</td>';
 	  	rows = rows + '<td>'+value.name+'</td>';
         rows = rows + '<td>'+value.mobile+'</td>';
@@ -72,8 +84,8 @@ function manageRow(data) {
             rows = rows + '<td>'+'Yêu cầu gọi lại'+'</td>';
         }
 	  	rows = rows + '<td data-id="'+value.orderid+'">';
-        rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item">Edit</button> ';
-        rows = rows + '<button class="btn btn-danger remove-item">Delete</button>';
+        rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item">Sửa</button> ';
+        rows = rows + '<button class="btn btn-danger remove-item">Xóa</button>';
         rows = rows + '</td>';
 	  	rows = rows + '</tr>';
 	});
@@ -102,14 +114,15 @@ $(".crud-submit").click(function(e){
             url: url + form_action,
             data:{orderid: orderid, name: name, mobile: mobile, email: email, date: date, pnr: pnr, orderfrom: orderfrom, orderto: orderto, status: status}
         }).done(function(data){
-            $("#create-item").find("input[name='orderid']").val();
-            $("#create-item").find("input[name='name']").val();
-            $("#create-item").find("input[name='mobile']").val();
-            $("#create-item").find("input[name='email']").val();
-            $("#create-item").find("input[name='date']").val();
-            $("#create-item").find("input[name='pnr']").val();
-            $("#create-item").find("input[name='orderfrom']").val();
-            $("#create-item").find("input[name='orderto']").val();
+//	    console.log('')
+            $("#create-item").find("input[name='orderid']").val('');
+            $("#create-item").find("input[name='name']").val('');
+            $("#create-item").find("input[name='mobile']").val('');
+            $("#create-item").find("input[name='email']").val('');
+            $("#create-item").find("input[name='date']").val('');
+            $("#create-item").find("input[name='pnr']").val('');
+            $("#create-item").find("input[name='orderfrom']").val('');
+            $("#create-item").find("input[name='orderto']").val('');
             $("#create-item").find("select[name='status']").val();
 
             getPageData();
