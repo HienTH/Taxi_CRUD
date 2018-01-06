@@ -18,7 +18,7 @@ function manageData() {
     	current_page = page;
 
     	$('#pagination').twbsPagination({
-	        totalPages: total_page,
+	        totalPages: total_page,    
 	        visiblePages: current_page,
 	        onPageClick: function (event, pageL) {
 	        	page = pageL;
@@ -152,6 +152,23 @@ $("body").on("click",".remove-item",function(){
 
 });
     
+/* Search */
+$("#searchdate").click(function(e){
+    var d = document.getElementById('textdate').value;
+
+    $.ajax({
+        dataType: 'json',
+        type:'POST',
+        url: url + 'api/getDataTime.php',
+        data:{date:d}
+    }).done(function(data){
+        console.log(data);
+
+        manageRow(data.data);
+
+        document.getElementById('pagination').style.visibility = "hidden";
+    });
+});
 
 /* Edit Item */
 $("body").on("click",".edit-item",function(){

@@ -12,7 +12,7 @@
 	    <link rel="shortcut icon" type="image/x-icon" href="/crud/favicon.ico">
 
 	<script type="text/javascript">
-    	var url = "http://45.119.83.5/crud/";
+    	var url = "http://127.0.0.1/";
     </script>
     <style type="text/css">
     	.modal-dialog, .modal-content{
@@ -20,10 +20,9 @@
 		}
     </style>
 
-    <script src= "/crud/js/item-ajax.js"></script>
+    <script src= "/js/item-ajax.js"></script>
 </head>
 <body>
-
 	<div class="container">
 		<div class="row">
 		    <div class="col-lg-12 margin-tb">					
@@ -40,6 +39,17 @@
 
 		<div class="panel panel-primary">
 			  <div class="panel-heading">Quản Lý Đơn Hàng</div>
+
+			  <div class="sidebar-form" style="margin-left: 75%; margin-top: 10px;">
+        		<div class="input-group">
+          		<input type="date" name="q" class="form-control" id="textdate">
+          		<span class="input-group-btn">
+                <button id="searchdate" type="button" class="btn btn-success" style="margin-right: 12px; ">Tìm kiếm</button>
+              	</span>
+        		</div>
+        		<a class="btn btn-flat" href="http://127.0.0.1/" rel="noopener">Tất cả</a>
+      		  </div>
+			  
 			  <div class="panel-body">
 				<table class="table table-bordered">
 					<thead>
